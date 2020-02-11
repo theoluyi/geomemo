@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_02_10_225859) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string "title"
+    t.string "title", default: "Untitled", null: false
     t.string "content"
     t.boolean "nsfw"
     t.integer "notebook_id", null: false
