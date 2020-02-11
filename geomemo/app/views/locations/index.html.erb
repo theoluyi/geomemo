@@ -1,0 +1,8 @@
+<h1> Locations </h1>
+<%= button_to "New Location", new_location_path, :method => "get" %> <br>
+
+<% @locations.each do |location| %> 
+    <%= link_to location.name, location_path(location) %>
+<% end %>
+
+

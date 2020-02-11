@@ -1,0 +1,8 @@
+
+    <% if @location.notes.length > 0  %>
+        <% @location.notes.each do |note| %>
+            <%= link_to note.title, note_path(note) %>
+        <% end  %>
+    <% else %>
+        <%= "You don't have any notes in this location." %>
+    <% end  %>
