@@ -1,5 +1,8 @@
 
     <% if @location.notes.length > 0  %>
+     <%= button_to "Edit Location", edit_location_path, method: "get"%> 
+     <%= button_to "Delete Location", location_path(@location), method: "delete" %>
+     <br>
         <% @location.notes.each do |note| %>
             <%= link_to note.title, note_path(note) %>
         <% end  %>

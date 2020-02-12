@@ -22,6 +22,7 @@ Location.destroy_all
 Notebook.create(name: "Personal")
 Notebook.create(name: "Work")
 
+Location.create(name: "Uncategorized")
 Location.create(name: "Kitchen")
 Location.create(name: "Bedside Table")
 Location.create(name: "School")

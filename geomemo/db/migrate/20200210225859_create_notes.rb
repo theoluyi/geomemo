@@ -5,7 +5,7 @@ class CreateNotes < ActiveRecord::Migration[6.0]
       t.string :content
       t.boolean :nsfw
       t.belongs_to :notebook, null: false, foreign_key: true
-      t.belongs_to :location, null: false, foreign_key: true
+      t.belongs_to :location, null: true, foreign_key: true
 
       t.timestamps
     end

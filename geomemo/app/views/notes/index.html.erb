@@ -1,3 +1,5 @@
+<h1> All Notes </h1>
+<%= button_to "New Note", new_note_path, method: "get" %>
 <% @notes.each do |note| %>
   <ul>
     <li>
@@ -5,3 +7,4 @@
     </li>
   </ul>
 <% end %>
+

@@ -1,7 +1,9 @@
 
 <h1><%= @note.title %></h1>
 
-<h5>Notebook: <%= Notebook.find(@note.notebook_id).name %> || Location: <%= Location.find(@note.location_id).name %></h5>
+<h5>Notebook: <%= Notebook.find(@note.notebook_id).name %> || Location: <%= Location.find(@note.location_id).name %>
+</h5>
+
 
 <p><%= @note.content %></p>
 

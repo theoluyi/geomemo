@@ -2,7 +2,9 @@
 <%= button_to "New Location", new_location_path, :method => "get" %> <br>
 
 <% @locations.each do |location| %> 
-    <%= link_to location.name, location_path(location) %>
+   <p><%= link_to location.name, location_path(location) %> <%= button_to "Edit", edit_location_path(location), method: "get" %> 
+   <%= button_to "Delete", location_path(location), method: "delete" %> 
+ </p>
 <% end %>
 
 
