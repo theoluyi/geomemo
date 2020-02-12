@@ -1,12 +1,33 @@
+h1 {
+  font-size: 100px;
+  color: white;
+  text-align: center;
+}
+.level .level-left .level-item{
+  text-align: center;
+}
+
 body {
+  font-family: Chalkduster, fantasy;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   height:100vh;
+  background-image: linear-gradient(to right top, #069d4a, #0da66c, #2bae89, #4bb6a1, #6dbcb4, #52b8bc, #33b3c6, #00add1, #0097e6, #007df9, #005afe, #0f15e9);
+}
+.footer{
+  border-radius: -50px;
+}
+.header, .footer{
+  font-family: monospace;
+  background-color: #FCFAF4;
+  // border-radius: 50px;
+
 }
 .header {
-  background-color:white;
-  padding:2rem 1.5rem;
+  // background-color:white;
+  padding:1rem 1.5rem;
+    border-radius: 50px;
 }
 .section {
   display:flex;
