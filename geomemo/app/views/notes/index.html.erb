@@ -3,8 +3,8 @@
 <% @notes.each do |note| %>
   <ul>
     <li>
-      <%= link_to note.title, note_path(note) %>
+      <%= link_to note.title, note_path(note) %> <%= button_to "Edit", edit_note_path(note), method: :get %>
+      <%= button_to "Delete", note_path(note), method: "delete" %>
     </li>
   </ul>
 <% end %>
-
