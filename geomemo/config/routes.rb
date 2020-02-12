@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'notebooks#index'
   resources :notes
   resources :locations
   resources :notebooks, only: [:index, :show]
