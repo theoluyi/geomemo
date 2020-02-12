@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_02_10_225859) do
     t.string "content"
     t.boolean "nsfw"
     t.integer "notebook_id", null: false
-    t.integer "location_id"
+    t.integer "location_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["location_id"], name: "index_notes_on_location_id"
