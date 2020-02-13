@@ -1,17 +1,39 @@
-<div class="locations">
-  <h1> Locations </h1>
-</div>
-<%= button_to "New Location", new_location_path, :method => "get" %> <br>
+<!-- hero ------------------------------------------------->
 
-<% @locations.each do |location| %>
-  <div class="thumbnail">
-    <a href="<%= location_path(location) %>"><img src=<%= location.thumbnail %> alt=""></a>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1"> Locations </h1> 
+    </div>
+    <div class="subtitle"> 
+      <%= button_to "New Location", new_location_path, :method => "get" %>  </div>
+    </div>
+</section>
+
+<!-- thumbnails ------------------------------------------------->
+
+<!-- columns ------------------------------------------------->
+
+<div class="container is-fluid">
+  <div class="columns is-multiline">
+      <% @locations.map do |location| %>
+
+        
+
+           <div class="column is-one-third">
+            <div class="thumbnail">
+              <a href="<%= location_path(location) %>"><img src=<%= location.thumbnail %> alt=""></a>
+            </div>
+                <%= link_to location.name, location_path(location) %> <br>
+
+                <!-- <div class="button is-info"> <%= link_to "Edit", edit_location_path(location) %>  </div>  -->
+                <a href= "<%= edit_location_path(location) %>" > <button class="button is-light">Edit</button> </a>
+                <% if location.id != Location.first.id %>
+                <!-- <a href= '<%= link_to "Delete", locations_path(location), method: "delete" %>'> <button class="button is-light">Delete</button> </a> -->
+
+                    <!-- <%= button_to "Delete", location_path(location), method: "delete" %> -->
+                <% end %>  
+           </div>
+      <% end %>
   </div>
-
-   <p><%= link_to location.name, location_path(location) %>
-     <%= button_to "Edit", edit_location_path(location), method: "get" %>
-     <% if location.id != Location.first.id %>
-      <%= button_to "Delete", location_path(location), method: "delete" %>
-    <% end %>
- </p>
-<% end %>
+</div>
