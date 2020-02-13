@@ -4,7 +4,8 @@
 <%= button_to "New Location", new_location_path, :method => "get" %> <br>
 
 <% @locations.each do |location| %>
-   <p><%= link_to location.name, location_path(location) %> <%= button_to "Edit", edit_location_path(location), method: "get" %>
+   <p><%= location.name %> <%= button_to "Edit", edit_location_path(location), method: "get" %>
+     <%= link_to location.thumbnail, location_path(location) %>
      <% if location.id != Location.first.id %>
       <%= button_to "Delete", location_path(location), method: "delete" %>
     <% end %>
