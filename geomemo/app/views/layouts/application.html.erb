@@ -10,6 +10,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -34,15 +35,19 @@
     </nav>
   </div>
 </header>
-<section class="section">
-  <div class="container">
-    <%= yield %>
-  </div>
-</section>
+<div class="wrapper">
+    <div class="content">
+      <section class="section">
+        <div class="container">
+          <%= yield %>
+          <div class="sliding-background"></div>
+
+        </div>
+      </section>
+</div>
+<!-- end wrapper --></div>
 <footer class="footer">
-  <div class="container">
     Copyright © 2020 GeoMemo. All rights reserved.
-  </div>
 </footer>
   </body>
 </html>

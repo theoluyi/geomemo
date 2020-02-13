@@ -22,6 +22,7 @@ Location.destroy_all
 Notebook.create(name: "Personal")
 Notebook.create(name: "Work")
 
+<<<<<<< HEAD
 Location.create(name: "Uncategorized", thumbnail: "/images/uncategorized.jpg")
 Location.create(name: "Kitchen", thumbnail: "/images/kitchen.jpg")
 Location.create(name: "Bedside Table", thumbnail: "/images/bedside-table.jpg")
@@ -30,6 +31,16 @@ Location.create(name: "Back Pocket", thumbnail: "/images/backpocket.jpg")
 Location.create(name: "Bank", thumbnail: "/images/bank.jpg")
 Location.create(name: "Car", thumbnail: "/images/car.jpg")
 Location.create(name: "Laptop", thumbnail: "/images/laptop.jpg")
+=======
+Location.create(name: "Uncategorized", thumbnail: "../app/assets/images/thumbnails/uncategorized.jpg")
+Location.create(name: "Kitchen", thumbnail: "../app/assets/images/thumbnails/kitchen.jpg")
+Location.create(name: "Bedside Table", thumbnail: "../app/assets/images/thumbnails/bedside-table.jpg")
+Location.create(name: "School", thumbnail: "../app/assets/images/thumbnails/school.jpg")
+Location.create(name: "Back Pocket", thumbnail: "../app/assets/images/thumbnails/backpocket.jpg")
+Location.create(name: "Bank", thumbnail: "../app/assets/images/thumbnails/bank.jpg")
+Location.create(name: "Car", thumbnail: "../app/assets/images/thumbnails/car.jpeg")
+Location.create(name: "Laptop", thumbnail: "../app/assets/images/thumbnails/laptop.jpg")
+>>>>>>> f16995cd53cb297ac273e86444a68f77bdf6a094
 
 Note.create(title: "Grocery List", content: "General Tso's Chicken", nsfw: false, notebook_id: Notebook.find_by(name: "Personal").id, location_id: Location.find_by(name: "Kitchen").id)
 Note.create(content: "Birthday card for bro", nsfw: false, notebook_id: Notebook.find_by(name: "Personal").id, location_id: Location.find_by(name: "Back Pocket").id)
