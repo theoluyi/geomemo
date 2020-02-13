@@ -24,7 +24,7 @@ Notebook.create(name: "Work")
 
 Location.create(name: "Uncategorized", thumbnail: "/images/uncategorized.jpg")
 Location.create(name: "Kitchen", thumbnail: "/images/kitchen.jpg")
-Location.create(name: "Bedside Table", thumbnail: "/images/besdside-table.jpg")
+Location.create(name: "Bedside Table", thumbnail: "/images/bedside-table.jpg")
 Location.create(name: "School", thumbnail: "/images/School.jpg")
 Location.create(name: "Back Pocket", thumbnail: "/images/backpocket.jpg")
 Location.create(name: "Bank", thumbnail: "/images/bank.jpg")

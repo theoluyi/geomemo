@@ -1,11 +1,16 @@
+<% if action_name === "show" %>
+  <body class="body-<%= @location.name.downcase.split(' ').join %> ">
+<% else %>
+  <body>
+<% end %>
 
-    <% if @location.notes.length > 0  %>
-     <%= button_to "Edit Location", edit_location_path, method: "get"%> 
-     <%= button_to "Delete Location", location_path(@location), method: "delete" %>
-     <br>
-        <% @location.notes.each do |note| %>
-            <%= link_to note.title, note_path(note) %>
-        <% end  %>
-    <% else %>
-        <%= "You don't have any notes in this location." %>
-    <% end  %>
+<% if @location.notes.length > 0  %>
+  <%= button_to "Edit Location", edit_location_path, method: "get"%>
+  <%= button_to "Delete Location", location_path(@location), method: "delete" %>
+  <br>
+  <% @location.notes.each do |note| %>
+    <%= link_to note.title, note_path(note) %>
+  <% end  %>
+<% else %>
+  <%= "You don't have any notes in this location." %>
+<% end  %>

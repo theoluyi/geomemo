@@ -15,6 +15,39 @@ body {
   height:100vh;
   background-image: linear-gradient(to right top, #069d4a, #0da66c, #2bae89, #4bb6a1, #6dbcb4, #52b8bc, #33b3c6, #00add1, #0097e6, #007df9, #005afe, #0f15e9);
 }
+
+.body-kitchen {
+  background-image: url("/images/kitchen.jpg")
+}
+
+.body-uncategorized {
+  background-image: url("/images/uncategorized.jpg")
+}
+
+.body-bedsidetable {
+  background-image: url("/images/bedside-table.jpg")
+}
+
+.body-school {
+  background-image: url("/images/school.jpg")
+}
+
+.body-backpocket {
+  background-image: url("/images/backpocket.jpg")
+}
+
+.body-bank {
+  background-image: url("/images/bank.jpg")
+}
+
+.body-car {
+  background-image: url("/images/car.jpg")
+}
+
+.body-laptop {
+  background-image: url("/images/laptop.jpg")
+}
+
 .footer{
   border-radius: -50px;
 }
