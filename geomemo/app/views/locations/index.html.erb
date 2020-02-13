@@ -4,8 +4,10 @@
 <%= button_to "New Location", new_location_path, :method => "get" %> <br>
 
 <% @locations.each do |location| %>
+  <div class="thumbnail">
+    <a href="<%= location_path(location) %>"><img src=<%= location.thumbnail %> alt=""></a>
+  </div>
 
-   <img src=<%= location.thumbnail %> alt="">
    <p><%= link_to location.name, location_path(location) %>
      <%= button_to "Edit", edit_location_path(location), method: "get" %>
      <% if location.id != Location.first.id %>
