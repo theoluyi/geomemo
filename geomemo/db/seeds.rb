@@ -23,7 +23,7 @@ Notebook.create(name: "Personal")
 Notebook.create(name: "Work")
 
 Location.create(name: "Uncategorized", thumbnail: "/images/1_uncategorized_6.png")
-Location.create(name: "Home", thumbnail: "/images/2_home_3.png")
+Location.create(name: "Home", thumbnail: "/images/2_home_5.png")
 Location.create(name: "Back Pocket", thumbnail: "/images/3_backpocket_5.png")
 Location.create(name: "School Bag", thumbnail: "/images/4_school_bag_2.png")
 Location.create(name: "Briefcase", thumbnail: "/images/5_briefcase_4.png")
