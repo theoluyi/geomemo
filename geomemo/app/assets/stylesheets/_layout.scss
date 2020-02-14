@@ -18,47 +18,43 @@ h1 {
 }
 
 
-
 body {
   font-family: Chalkduster, fantasy;
   background-image: linear-gradient(to right, #000000, #434343);
 }
 
-.body-kitchen {
-  background-image: url("/images/kitchen.jpg")
-}
+// .body-kitchen {
+//   background-image: url("/images/kitchen.jpg")
+// }
+//
+// .body-uncategorized {
+//   background-image: url("/images/uncategorized.jpg")
+// }
+//
+// .body-bedsidetable {
+//   background-image: url("/images/bedside-table.jpg")
+// }
+//
+// .body-schoolbag {
+//   background-image: url("/images/school.jpg")
+// }
+//
+// .body-backpocket {
+//   background-image: url("/images/backpocket.jpg")
+// }
+//
+// .body-bank {
+//   background-image: url("/images/bank.jpg")
+// }
+//
+// .body-car {
+//   background-image: url("/images/car.jpg")
+// }
+//
+// .body-laptop {
+//   background-image: url("/images/laptop.jpg")
+// }
 
-.body-uncategorized {
-  background-image: url("/images/uncategorized.jpg")
-}
-
-.body-bedsidetable {
-  background-image: url("/images/bedside-table.jpg")
-}
-
-.body-school {
-  background-image: url("/images/school.jpg")
-}
-
-.body-backpocket {
-  background-image: url("/images/backpocket.jpg")
-}
-
-.body-bank {
-  background-image: url("/images/bank.jpg")
-}
-
-.body-car {
-  background-image: url("/images/car.jpg")
-}
-
-.body-laptop {
-  background-image: url("/images/laptop.jpg")
-}
-
-.body-laptop, .body-car, .body-bank, .body-backpocket, .body-school, .body-bedsidetable, .body-uncategorized {
-
-}
 
 .footer{
   // margin-bottom: 2rem 1.5rem;
