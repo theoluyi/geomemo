@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_13_143721) do
+ActiveRecord::Schema.define(version: 2020_02_14_153152) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
@@ -30,14 +30,24 @@ ActiveRecord::Schema.define(version: 2020_02_13_143721) do
     t.string "title", default: "Untitled", null: false
     t.string "content"
     t.boolean "nsfw"
+    t.integer "user_id", null: false
     t.integer "notebook_id", null: false
     t.integer "location_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["location_id"], name: "index_notes_on_location_id"
     t.index ["notebook_id"], name: "index_notes_on_notebook_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "notes", "locations"
   add_foreign_key "notes", "notebooks"
+  add_foreign_key "notes", "users"
 end

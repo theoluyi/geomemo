@@ -4,6 +4,7 @@ class CreateNotes < ActiveRecord::Migration[6.0]
       t.string :title, :null => false, :default => 'Untitled'
       t.string :content
       t.boolean :nsfw
+      t.belongs_to :user, null: false, foreign_key: true
       t.belongs_to :notebook, null: false, foreign_key: true
       t.belongs_to :location, null: true, foreign_key: true
 
