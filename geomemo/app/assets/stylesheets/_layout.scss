@@ -18,25 +18,34 @@ h1 {
 }
 
 
-
 body {
   font-family: Chalkduster, fantasy;
   background-image: linear-gradient(to right, #000000, #434343);
 }
 
+.text {
+  background-color: white;
+  opacity: 40%;
+}
+
 .body-kitchen {
-  background-image: url("/images/kitchen.jpg")
+  background-image: url("/images/8_kitchen_3.png");
+  background-size: cover;
+
+
 }
 
 .body-uncategorized {
-  background-image: url("/images/uncategorized.jpg")
+  background-image: url("/images/Selected Photos/1_uncategorized_6.png");
+  background-size: cover;
+  background-color: black;
 }
 
 .body-bedsidetable {
   background-image: url("/images/bedside-table.jpg")
 }
 
-.body-school {
+.body-schoolbag {
   background-image: url("/images/school.jpg")
 }
 
@@ -56,18 +65,18 @@ body {
   background-image: url("/images/laptop.jpg")
 }
 
-.body-laptop, .body-car, .body-bank, .body-backpocket, .body-school, .body-bedsidetable, .body-uncategorized {
-
-}
 
 .footer{
   // margin-bottom: 2rem 1.5rem;
+  background-color: black;
   text-align: center;
   margin: 300px 30px 30px 30px;
+  opacity: 50%;
+  color: white;
 }
 .header, .footer{
   font-family: monospace;
-  background-color: #FCFAF4;
+
   // border-radius: 50px;
   // border-bottom: 50px;
 
@@ -80,6 +89,7 @@ body {
   padding-top: 2rem 1.5rem;
   margin: 0px 30px 30px 30px;
   border-radius: 50px;
+  background-color: #FCFAF4;
 }
 .section {
   display:flex;

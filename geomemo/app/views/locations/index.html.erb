@@ -3,13 +3,13 @@
 <section class="hero">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title is-1"> Locations </h1> 
+      <h1 class="title is-1" style="color: white;"> Locations </h1>
     </div>
-    <div class="subtitle"> 
+    <div class="subtitle">
     <% if logged_in? %>
     <h1>You are Logged In, <%= current_user.username %></h1>
     <%end%>
-      <%= button_to "New Location", new_location_path, :method => "get", class: "button is-dark" %>  
+      <%= button_to "New Location", new_location_path, :method => "get", class: "button is-dark" %>
       <%= button_to "Sign-up", new_user_path, :method => "get", class: "button is-dark" %>
       <%= button_to "Log-in", '/login', :method => "get", class: "button is-dark" %>
       </div>
@@ -25,7 +25,7 @@
   <div class="columns is-multiline">
       <% @locations.map do |location| %>
 
-        
+
 
            <div class="column is-one-third">
             <div class="thumbnail">
@@ -33,8 +33,8 @@
             </div>
                 <%= link_to location.name, location_path(location) %> <br>
 
-     
-                <% if location.id != Location.first.id %> 
+
+                <% if location.id != Location.first.id %>
 
                 <div class="field is-grouped">
                   <p class="control">
@@ -43,15 +43,15 @@
                       Edit
                     </button>
                   </p>
-                  
+
                   <p class="control">
                   <a href= "<%= location_path(location) %>" >
                     <%= button_to "Delete", location_path(location), method: "delete", class: "button is-dark" %>
                   </p>
                 </div>
 
-                
-                <% end %>  
+
+                <% end %>
            </div>
       <% end %>
   </div>
