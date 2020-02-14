@@ -32,7 +32,6 @@ Location.create(name: "Kitchen", thumbnail: "/images/8_kitchen_3.png")
 Location.create(name: "Dreamland", thumbnail: "/images/7_dreamland_2.png")
 Location.create(name: "Treasury", thumbnail: "/images/9_treasure_5.png")
 
-
 Note.create(title: "Grocery List", content: "General Tso's Chicken", nsfw: false, notebook_id: Notebook.find_by(name: "Personal").id, location_id: Location.find_by(name: "Kitchen").id)
 Note.create(content: "Birthday card for bro", nsfw: false, notebook_id: Notebook.find_by(name: "Personal").id, location_id: Location.find_by(name: "Back Pocket").id)
 Note.create(title: "Project Guidelines", content: string_for_guidelines, nsfw: false, notebook_id: Notebook.find_by(name: "Work").id, location_id: Location.find_by(name: "School Bag").id)

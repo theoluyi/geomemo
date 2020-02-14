@@ -10,6 +10,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -18,7 +19,7 @@
     <nav class="level">
       <div class="level-left">
         <div class="level-item">
-          <h2>GeoMemo</h2>
+          <%= link_to "GeoMemo", root_path %>
         </div>
       </div>
       <div class="level-center">
@@ -28,21 +29,25 @@
       </div>
       <div class="level-right">
         <p class="level-item">
-          <%= link_to "Locations", locations_path %>
+          <%= link_to "Notebooks", notebooks_path %>
         </p>
       </div>
     </nav>
   </div>
 </header>
-<section class="section">
-  <div class="container">
-    <%= yield %>
-  </div>
-</section>
+<div class="wrapper">
+    <div class="content">
+      <section class="section">
+        <div class="container">
+          <%= yield %>
+          <div class="sliding-background"></div>
+
+        </div>
+      </section>
+</div>
+<!-- end wrapper --></div>
 <footer class="footer">
-  <div class="container">
     Copyright © 2020 GeoMemo. All rights reserved.
-  </div>
 </footer>
   </body>
 </html>
