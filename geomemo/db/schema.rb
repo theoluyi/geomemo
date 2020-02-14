@@ -31,18 +31,11 @@ ActiveRecord::Schema.define(version: 2020_02_13_143721) do
     t.string "content"
     t.boolean "nsfw"
     t.integer "notebook_id", null: false
-    t.integer "location_id", null: false
+    t.integer "location_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["location_id"], name: "index_notes_on_location_id"
     t.index ["notebook_id"], name: "index_notes_on_notebook_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "notes", "locations"

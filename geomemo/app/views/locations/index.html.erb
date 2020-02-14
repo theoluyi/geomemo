@@ -26,9 +26,24 @@
             </div>
                 <%= link_to location.name, location_path(location) %> <br>
 
-                <!-- <div class="button is-info"> <%= link_to "Edit", edit_location_path(location) %>  </div>  -->
-                <a href= "<%= edit_location_path(location) %>" > <button class="button is-light">Edit</button> </a>
-                <% if location.id != Location.first.id %>
+     
+                <% if location.id != Location.first.id %> 
+
+                <div class="field is-grouped">
+                  <p class="control">
+                    <a href= "<%= edit_location_path(location) %>" >
+                    <button class="button is-link">
+                      Edit
+                    </button>
+                  </p>
+                  
+                  <p class="control">
+                  <a href= "<%= location_path(location) %>" >
+                    <%= button_to "Delete", location_path(location), method: "delete", class: "button is-danger" %>
+                  </p>
+                </div>
+
+                
                 <!-- <a href= '<%= link_to "Delete", locations_path(location), method: "delete" %>'> <button class="button is-light">Delete</button> </a> -->
 
                     <!-- <%= button_to "Delete", location_path(location), method: "delete" %> -->
