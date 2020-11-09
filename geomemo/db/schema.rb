@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_02_13_143721) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "locations", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 2020_02_13_143721) do
     t.string "title", default: "Untitled", null: false
     t.string "content"
     t.boolean "nsfw"
-    t.integer "notebook_id", null: false
-    t.integer "location_id"
+    t.bigint "notebook_id", null: false
+    t.bigint "location_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["location_id"], name: "index_notes_on_location_id"
